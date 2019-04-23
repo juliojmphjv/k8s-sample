@@ -19,7 +19,7 @@ spec:
         tier: webserver
     spec:
       containers:
-      - image: gcr.io/artful-journey-238517/myage@sha256:06d98e0fcb29f82ced139fadf857c8f66650148a2df18527876232c9c4163314
+      - image: gcr.io/artful-journey-238517/myage@sha256:36bf4ac3520f5bd34ec4d9d3db85ea8295183c4e5e2774aa1e8dfc4252940b3f
         name: nginx-php
         ports:
           - containerPort: 80

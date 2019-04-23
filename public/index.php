@@ -10,4 +10,4 @@ $age = new \App\Age($date, $today);
 
 ?>
 
-Minha Idade = <?=$age;?>
+Minha Idade = <?=$age->calculate();?>
