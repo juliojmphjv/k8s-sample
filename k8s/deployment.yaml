@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+
+metadata:
+  name: nginx-php
+  labels:
+    app: nginx-php
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx-php
+      tier: webserver
+  template:
+    metadata:
+      labels:
+        app: nginx-php
+        tier: webserver
+    spec:
+      containers:
+      - image: gcr.io/artful-journey-238517/myage@sha256:06d98e0fcb29f82ced139fadf857c8f66650148a2df18527876232c9c4163314
+        name: nginx-php
+        ports:
+          - containerPort: 80
