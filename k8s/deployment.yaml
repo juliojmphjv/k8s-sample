@@ -7,7 +7,7 @@ metadata:
     app: nginx-php
 
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: nginx-php
@@ -19,7 +19,7 @@ spec:
         tier: webserver
     spec:
       containers:
-      - image: gcr.io/artful-journey-238517/myage@sha256:36bf4ac3520f5bd34ec4d9d3db85ea8295183c4e5e2774aa1e8dfc4252940b3f
+      - image: gcr.io/artful-journey-238517/myage@sha256:b24bd363bd957b42a708ec93f1ba207db59886b48806d657533f5d353e8056dd
         name: nginx-php
         ports:
           - containerPort: 80
